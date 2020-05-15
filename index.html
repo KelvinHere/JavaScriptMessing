@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <title>JavaTest</title>
+</head>
+<body>
+    <a href="index.html">home</a>
+    <p id="numberP">20</p>
+    <button type="button" onclick="numUp()">UP</button>
+    <button type="button" onclick="numDown()">DOWN</button>
+</body>
+	<script>
+        /*Numbers Up and Down*/
+		function numUp(){
+	        let num = parseInt(document.getElementById("numberP").innerHTML);
+	        document.getElementById("numberP").innerHTML = num + 5;
+        }
+        function numDown(){
+	        let num = parseInt(document.getElementById("numberP").innerHTML);
+	        document.getElementById("numberP").innerHTML = num - 5;
+        }
+	</script>
+    
+</html>
