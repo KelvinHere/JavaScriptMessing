@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <title>JavaTest</title>
 </head>
 <body>
     <a href="index.html">home</a>
+    <!--Up and down buttons-->
     <p id="numberP">20</p>
     <button type="button" onclick="numUp()">UP</button>
     <button type="button" onclick="numDown()">DOWN</button>
+    <!--Change CSS color of div background-->
+    <div class="color-change-div" id="change-my-color"></div>
+    <button type="button" onclick="randomColor()">Random Color</button>
 </body>
 	<script>
         /*Numbers Up and Down*/
@@ -22,6 +27,14 @@
         function numDown(){
 	        let num = parseInt(document.getElementById("numberP").innerHTML);
 	        document.getElementById("numberP").innerHTML = num - 5;
+        }
+        /*Random color*/
+        function randomColor() {
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+            let rgbRandom = `rgb(${r},${g},${b})`;
+            document.getElementById('change-my-color').style.background = rgbRandom;
         }
 	</script>
     
