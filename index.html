@@ -16,7 +16,9 @@
     <button type="button" onclick="numDown()">DOWN</button>
     <!--Change CSS color of div background-->
     <div class="color-change-div" id="change-my-color"></div>
-    <button type="button" onclick="randomColor()">Random Color</button>
+    <button type="button" onclick="randomColor('change-my-color')">Random Color</button>
+    <!--Change color on mouse move-->
+    <div class="color-change-div" id="mouse-move-color-change"></div>
 </body>
 	<script>
         /*Numbers Up and Down*/
@@ -28,14 +30,19 @@
 	        let num = parseInt(document.getElementById("numberP").innerHTML);
 	        document.getElementById("numberP").innerHTML = num - 5;
         }
+        /*Constant color change Event via mouse move*/
+        document.addEventListener('mousemove', function() {
+            randomColor('mouse-move-color-change');
+        });
         /*Random color*/
-        function randomColor() {
+        function randomColor(elementID) {
             let r = Math.floor(Math.random() * 255);
             let g = Math.floor(Math.random() * 255);
             let b = Math.floor(Math.random() * 255);
             let rgbRandom = `rgb(${r},${g},${b})`;
-            document.getElementById('change-my-color').style.background = rgbRandom;
+            document.getElementById(elementID).style.background = rgbRandom;
         }
+
 	</script>
     
 </html>
