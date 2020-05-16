@@ -24,12 +24,15 @@
     <label for="allowColorChange">Allow color to change on mouse move</label>
     <hr>
     <!--Table interaction-->
-    <table class="table-class" id="table-to-size">
-    </table>
+    <div class="table-to-size-wrapper" id="table-wrapper">
+        <table class="table-class" id="table-to-size">
+        </table>
+    </div>
     <form>
-        <input type="text" id="rowAmount" name="rowAmount" placeholder="Rows">
-        <input type="text" id="colAmount" name="colAmount" placeholder="Cols">
-        <button type="button" onclick="createTable('rowAmount','colAmount','table-to-size')">Create Table</button>
+        <input type="text" id="rowAmount" name="rowAmount" placeholder="Rows" required>
+        <input type="text" id="colAmount" name="colAmount" placeholder="Cols" required>
+        <button type="button" onclick="createTable('rowAmount','colAmount','table-to-size','table-wrapper')">Create Table</button>
+        <!--<button type="button" onclick="createTable('rowAmount','colAmount','table-to-size')">Create Table</button>-->
     </form>
 </body>
     <script type="text/javascript" src="assets/js/element-manipulation.js"></script>
