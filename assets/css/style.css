@@ -1,5 +1,9 @@
 .color-change-div {
     height: 10vh;
-    width: 10vw;
+    width: 20vw;
     background: rgb(200,0,0);
+}
+
+.table-class td {
+    border: 2px solid black;
 }

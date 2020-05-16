@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <title>JavaTest</title>
 </head>
@@ -14,35 +13,27 @@
     <p id="numberP">20</p>
     <button type="button" onclick="numUp()">UP</button>
     <button type="button" onclick="numDown()">DOWN</button>
+    <hr>
     <!--Change CSS color of div background-->
     <div class="color-change-div" id="change-my-color"></div>
     <button type="button" onclick="randomColor('change-my-color')">Random Color</button>
+    <hr>
     <!--Change color on mouse move-->
     <div class="color-change-div" id="mouse-move-color-change"></div>
+    <hr>
+    <!--Table interaction-->
+    <table class="table-class">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
 </body>
-	<script>
-        /*Numbers Up and Down*/
-		function numUp(){
-	        let num = parseInt(document.getElementById("numberP").innerHTML);
-	        document.getElementById("numberP").innerHTML = num + 5;
-        }
-        function numDown(){
-	        let num = parseInt(document.getElementById("numberP").innerHTML);
-	        document.getElementById("numberP").innerHTML = num - 5;
-        }
-        /*Constant color change Event via mouse move*/
-        document.addEventListener('mousemove', function() {
-            randomColor('mouse-move-color-change');
-        });
-        /*Random color*/
-        function randomColor(elementID) {
-            let r = Math.floor(Math.random() * 255);
-            let g = Math.floor(Math.random() * 255);
-            let b = Math.floor(Math.random() * 255);
-            let rgbRandom = `rgb(${r},${g},${b})`;
-            document.getElementById(elementID).style.background = rgbRandom;
-        }
-
-	</script>
-    
+    <script type="text/javascript" src="assets/js/element-manipulation.js"></script>
+    <script type="text/javascript" src="assets/js/color-changing.js"></script>
+    <script type="text/javascript" src="assets/js/table-manipulation.js"></script>
 </html>
