@@ -1,6 +1,10 @@
 /*Constant color change Event via mouse move*/
 document.addEventListener('mousemove', function () {
-    randomColor('mouse-move-color-change');
+    let checkboxValue = document.getElementById('allowColorChange').checked;
+    if (checkboxValue === true) {
+        /*call randomColor only if checkbox is checked*/
+        randomColor('mouse-move-color-change');
+    }
 });
 
 /*Random color*/

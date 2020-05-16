@@ -20,9 +20,11 @@
     <hr>
     <!--Change color on mouse move-->
     <div class="color-change-div" id="mouse-move-color-change"></div>
+    <input type="checkbox" id="allowColorChange" name="allowColorChange">
+    <label for="allowColorChange">Allow color to change on mouse move</label>
     <hr>
     <!--Table interaction-->
-    <table class="table-class">
+    <table class="table-class" id="table-to-size">
         <tr>
             <td>1</td>
             <td>2</td>
@@ -32,6 +34,11 @@
             <td>2</td>
         </tr>
     </table>
+    <form>
+        <input type="text" id="rowAmount" name="rowAmount" placeholder="Rows">
+        <input type="text" id="colAmount" name="colAmount" placeholder="Cols">
+        <button type="button" onclick="createTable('rowAmount','colAmount')">Create Table</button>
+    </form>
 </body>
     <script type="text/javascript" src="assets/js/element-manipulation.js"></script>
     <script type="text/javascript" src="assets/js/color-changing.js"></script>
