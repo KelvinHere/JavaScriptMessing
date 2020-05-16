@@ -1,11 +1,22 @@
 /*Create table by size of input fields*/
-function createTable(row,col) {
+function createTable(row,col,inputTable) {
     /*Get rows and cols from html form input elements*/
     let rows = document.getElementById(row).value;
     let cols = document.getElementById(col).value;
+    let table = document.getElementById(inputTable);
     rows = parseInt(rows);
     cols = parseInt(cols);
 
-    
-
+    /*Outer loop to create rows*/
+    for (let r = 0; r < rows; r++) {
+        var row = table.insertRow(0);
+        /*inner loop to create cols*/
+        for (let c = 0; c < cols; c++) {
+            var cell = row.insertCell(c);
+            cell.innerHTML = `R${r}:C${c}`;      //cell text
+            cell.classList.add(`row-${r}`);      //cell row
+            cell.classList.add(`col-${c}`);      //cell col
+            cell.classList.add(`table-cell`);    //group
+        }
+    }
 }
