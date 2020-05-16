@@ -32,6 +32,3 @@ function createTable(row,col,inputTable,inputTableWrapper) {
         }
     }
 }
-
-//<table class="table-class" id="table-to-size">
-        //</table>

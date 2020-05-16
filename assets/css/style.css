@@ -1,9 +1,32 @@
 .color-change-div {
     height: 10vh;
-    width: 20vw;
+    width: 50%;
     background: rgb(200,0,0);
 }
 
-.table-class td {
-    border: 2px solid black;
+.table-to-size-wrapper {
+    width: 90%;
+    margin: auto;
+    
+}
+
+.table-class {
+    background: black;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-cell {
+    border: none;
+    background: lightgray;
+    text-align: center;
+    height: 50px;
+}
+
+.table-cell:hover {
+    background: green;
+}
+
+.table-cell:active {
+    background: red;
 }
