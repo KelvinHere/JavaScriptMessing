@@ -52,20 +52,40 @@ html, body {
     width: 95%;
     display: grid;
     /*grid-template-columns: 50%;  width of cols*/
-    grid-template-rows: 1fr 10fr 1fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr 1fr; /*Fraction larger take up more space*/
+    /*grid-template-rows:repeat(5, 1fr 10fr) would repeat 1 10 * 4 times*/
+    /*grid-autio-rows: minmax(10fr, auto) ----- = 10fr min but auto expand to max if needed*/
 }
 
-.item {
+.grid-item {
     background: purple;
 }
 
-.item:nth-child(odd) {
+.grid-item:nth-child(odd) {
     background: red;
 }
 
 @media screen and (min-width: 900px) {
+    .grid-header {
+        grid-area: header;
+    }
+
+    .grid-main {
+        grid-area: main;
+    }
+
+    .grid-control {
+        grid-area: control;
+    }
+
+    .grid-info {
+        grid-area: info;
+    }
+
     .grid-container {
-       /*grid-gap: 25px;*/
-       grid-template-columns: 100% 80% 10% 10%;
+       grid-gap: 5px; /*using fr units allows margins to not expand when using gap*/
+       grid-template-columns: 3fr 3fr 2fr;
+       grid-template-rows: 1fr 5fr 5fr;
+       grid-template-areas: 'header header header' 'main main control' 'main main info';
     }
 }
