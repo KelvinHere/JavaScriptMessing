@@ -30,3 +30,42 @@
 .table-cell:active {
     background: red;
 }
+
+/*--------------------------------------------------- resize-table.html*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-wrapper {
+    height: 100%;
+    width: 100%;
+    background: green;
+    display: grid;
+    place-items: center;
+}
+
+.grid-container {
+    box-sizing: border-box; /* include margins borders and padding in total size*/
+    background: blue;
+    height: 95%;
+    width: 95%;
+    display: grid;
+    /*grid-template-columns: 50%;  width of cols*/
+    grid-template-rows: 1fr 10fr 1fr 1fr;
+}
+
+.item {
+    background: purple;
+}
+
+.item:nth-child(odd) {
+    background: red;
+}
+
+@media screen and (min-width: 900px) {
+    .grid-container {
+       /*grid-gap: 25px;*/
+       grid-template-columns: 100% 80% 10% 10%;
+    }
+}
