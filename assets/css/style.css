@@ -47,7 +47,6 @@ html, body {
 
 .grid-container {
     box-sizing: border-box; /* include margins borders and padding in total size*/
-    background: blue;
     height: 95%;
     width: 95%;
     display: grid;
@@ -64,7 +63,24 @@ html, body {
 .grid-item:nth-child(odd) {
     background: red;
 }
+/*--------------------------------------------------- game board*/
+.game-board {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
+.game-board td {
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
+.game-board img {
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
+/*--------------------------------------------------- media quearies*/
 @media screen and (min-width: 900px) {
     .grid-header {
         grid-area: header;

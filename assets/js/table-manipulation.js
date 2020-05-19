@@ -1,3 +1,7 @@
+/*--------------------------------------
+    CREATE TABLE IN JAVASCRIPT
+--------------------------------------*/    
+
 /*Create table by size of input fields*/
 function createTable(row,col,inputTable,inputTableWrapper) {
     //Get rows and cols from html form input elements
@@ -32,3 +36,7 @@ function createTable(row,col,inputTable,inputTableWrapper) {
         }
     }
 }
+
+/*--------------------------------------
+    CREATE TABLE IN JQUERY
+--------------------------------------*/    
